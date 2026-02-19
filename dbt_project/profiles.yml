@@ -1,0 +1,24 @@
+healthcare_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('PG_HOST', 'localhost') }}"
+      port: "{{ env_var('PG_PORT', '5432') | int }}"
+      user: "{{ env_var('PG_USER', 'airflow') }}"
+      password: "{{ env_var('PG_PASSWORD', 'airflow') }}"
+      dbname: "{{ env_var('PG_DB', 'airflow') }}"
+      schema: public
+      threads: 4
+      connect_timeout: 10
+
+    prod:
+      type: postgres
+      host: "{{ env_var('PG_HOST') }}"
+      port: "{{ env_var('PG_PORT', '5432') | int }}"
+      user: "{{ env_var('PG_USER') }}"
+      password: "{{ env_var('PG_PASSWORD') }}"
+      dbname: "{{ env_var('PG_DB', 'healthcare_db') }}"
+      schema: gold
+      threads: 8
+      connect_timeout: 10

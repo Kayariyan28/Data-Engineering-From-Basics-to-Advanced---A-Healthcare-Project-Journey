@@ -1,0 +1,34 @@
+version: 2
+
+sources:
+  - name: silver
+    description: >
+      Silver layer — cleaned, validated, and typed data produced by the
+      PySpark transformation jobs. Loaded into PostgreSQL nightly for dbt consumption.
+    schema: silver
+
+    tables:
+      - name: admissions
+        description: Validated patient admissions with derived columns and DQ flags.
+        columns:
+          - name: admission_id
+            tests: [not_null, unique]
+          - name: patient_id
+            tests: [not_null]
+          - name: department
+            tests: [not_null]
+          - name: dq_flag
+            tests:
+              - accepted_values:
+                  values: ['VALID', 'INVALID_LOS:discharge_before_admission',
+                           'INVALID_AGE:negative', 'INVALID_AGE:unrealistic',
+                           'NULL_DATE:admission', 'NULL_DATE:discharge',
+                           'SUSPICIOUS_LOS:over_365_days']
+
+      - name: labs
+        description: Validated lab results with interpretation and deviation columns.
+        columns:
+          - name: lab_id
+            tests: [not_null, unique]
+          - name: admission_id
+            tests: [not_null]

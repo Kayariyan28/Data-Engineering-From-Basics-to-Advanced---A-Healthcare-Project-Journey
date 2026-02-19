@@ -1,0 +1,7 @@
+department,total_beds,target_los_days,target_readmission_pct,cost_center
+Cardiology,21,3,8.3,CC1262
+Neurology,43,10,9.8,CC8667
+Orthopedics,52,4,13.8,CC7927
+Emergency,80,4,12.3,CC8676
+ICU,22,5,14.5,CC8562
+Oncology,75,5,8.7,CC3671

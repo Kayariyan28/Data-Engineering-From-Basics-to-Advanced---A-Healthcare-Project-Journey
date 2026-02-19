@@ -1,0 +1,51 @@
+doctor_id,full_name,specialty,department,hospital,hire_date,years_exp,is_active
+DR0001,Dr. Emily Brown,Sports Medicine,Orthopedics,General Hospital,2001-05-16,23,True
+DR0002,Dr. James Jones,Intensivist,ICU,General Hospital,1999-08-06,25,True
+DR0003,Dr. Jennifer Garcia,Neurosurgeon,Neurology,General Hospital,2000-02-18,24,True
+DR0004,Dr. Emily Brown,Pulmonologist,ICU,General Hospital,2001-02-28,23,True
+DR0005,Dr. Sarah Johnson,Pulmonologist,ICU,University Medical Center,2014-12-11,10,True
+DR0006,Dr. Sarah Johnson,Cardiac Surgeon,Cardiology,St. Mary's,2021-08-21,3,True
+DR0007,Dr. James Miller,Intensivist,ICU,University Medical Center,2006-04-19,18,True
+DR0008,Dr. Robert Smith,Oncologist,Oncology,General Hospital,2019-01-16,5,True
+DR0009,Dr. Robert Johnson,Radiation Oncologist,Oncology,St. Mary's,2019-09-19,5,True
+DR0010,Dr. Sarah Williams,Cardiac Surgeon,Cardiology,St. Mary's,2021-09-03,3,False
+DR0011,Dr. Robert Smith,Trauma Surgeon,Emergency,General Hospital,2021-08-05,3,True
+DR0012,Dr. Sarah Davis,Cardiologist,Cardiology,General Hospital,2002-07-16,22,True
+DR0013,Dr. Emily Johnson,Neurologist,Neurology,University Medical Center,2003-03-05,21,False
+DR0014,Dr. Robert Davis,Neurosurgeon,Neurology,St. Mary's,2013-10-27,11,True
+DR0015,Dr. David Jones,Trauma Surgeon,Emergency,Regional Health,2004-04-01,20,True
+DR0016,Dr. Michael Smith,Cardiologist,Cardiology,General Hospital,1995-11-04,29,True
+DR0017,Dr. Robert Williams,Oncologist,Oncology,General Hospital,2019-11-13,5,True
+DR0018,Dr. Robert Jones,Trauma Surgeon,Emergency,St. Mary's,2001-02-28,23,True
+DR0019,Dr. David Garcia,Orthopedic Surgeon,Orthopedics,Regional Health,2019-12-25,5,True
+DR0020,Dr. Robert Jones,Pulmonologist,ICU,Regional Health,2011-12-18,13,True
+DR0021,Dr. David Johnson,Radiation Oncologist,Oncology,University Medical Center,1997-03-12,27,True
+DR0022,Dr. James Smith,Oncologist,Oncology,General Hospital,2001-11-23,23,True
+DR0023,Dr. Jennifer Smith,Orthopedic Surgeon,Orthopedics,Regional Health,2015-02-23,9,True
+DR0024,Dr. James Smith,Sports Medicine,Orthopedics,Regional Health,2015-12-27,9,True
+DR0025,Dr. James Johnson,Emergency Physician,Emergency,General Hospital,2008-07-25,16,True
+DR0026,Dr. David Williams,Radiation Oncologist,Oncology,General Hospital,2021-02-02,3,True
+DR0027,Dr. Sarah Williams,Radiation Oncologist,Oncology,Regional Health,2011-04-18,13,True
+DR0028,Dr. Lisa Brown,Radiation Oncologist,Oncology,University Medical Center,2005-08-19,19,True
+DR0029,Dr. Emily Miller,Pulmonologist,ICU,General Hospital,2018-04-26,6,True
+DR0030,Dr. Jennifer Garcia,Radiation Oncologist,Oncology,Regional Health,2015-04-17,9,True
+DR0031,Dr. Jennifer Brown,Oncologist,Oncology,University Medical Center,2003-06-22,21,True
+DR0032,Dr. David Davis,Sports Medicine,Orthopedics,University Medical Center,2004-12-04,20,True
+DR0033,Dr. David Williams,Oncologist,Oncology,General Hospital,2003-05-19,21,True
+DR0034,Dr. Robert Johnson,Pulmonologist,ICU,Regional Health,2017-09-12,7,True
+DR0035,Dr. Robert Miller,Emergency Physician,Emergency,St. Mary's,2007-01-20,17,True
+DR0036,Dr. Lisa Smith,Sports Medicine,Orthopedics,General Hospital,2011-07-11,13,True
+DR0037,Dr. Sarah Garcia,Sports Medicine,Orthopedics,St. Mary's,2014-03-04,10,True
+DR0038,Dr. Lisa Jones,Neurologist,Neurology,St. Mary's,1996-06-03,28,True
+DR0039,Dr. Michael Williams,Radiation Oncologist,Oncology,St. Mary's,2019-07-23,5,False
+DR0040,Dr. Robert Brown,Intensivist,ICU,University Medical Center,2011-12-21,13,True
+DR0041,Dr. Robert Smith,Emergency Physician,Emergency,General Hospital,2014-01-02,10,True
+DR0042,Dr. Robert Johnson,Trauma Surgeon,Emergency,University Medical Center,2003-09-12,21,True
+DR0043,Dr. Michael Williams,Intensivist,ICU,University Medical Center,2016-05-12,8,True
+DR0044,Dr. Emily Garcia,Cardiologist,Cardiology,Regional Health,2011-12-22,13,True
+DR0045,Dr. Lisa Davis,Neurologist,Neurology,Regional Health,2012-12-14,12,True
+DR0046,Dr. Sarah Davis,Cardiac Surgeon,Cardiology,University Medical Center,2000-05-26,24,True
+DR0047,Dr. Lisa Garcia,Sports Medicine,Orthopedics,St. Mary's,2005-04-26,19,False
+DR0048,Dr. James Miller,Cardiologist,Cardiology,General Hospital,2019-04-24,5,True
+DR0049,Dr. Lisa Brown,Emergency Physician,Emergency,St. Mary's,2014-06-08,10,True
+DR0050,Dr. Lisa Williams,Cardiac Surgeon,Cardiology,Regional Health,2010-08-14,14,True

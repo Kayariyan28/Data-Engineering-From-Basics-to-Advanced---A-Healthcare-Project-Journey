@@ -1,0 +1,82 @@
+[
+  {
+    "step": "ingest_admissions",
+    "layer": "bronze",
+    "status": "success",
+    "records_in": 10000,
+    "records_out": 10000,
+    "elapsed_sec": 0,
+    "notes": "",
+    "timestamp": "19:26:54"
+  },
+  {
+    "step": "ingest_labs",
+    "layer": "bronze",
+    "status": "success",
+    "records_in": 12624,
+    "records_out": 12624,
+    "elapsed_sec": 0,
+    "notes": "",
+    "timestamp": "19:26:54"
+  },
+  {
+    "step": "transform_admissions",
+    "layer": "silver",
+    "status": "success",
+    "records_in": 10000,
+    "records_out": 9842,
+    "elapsed_sec": 0,
+    "notes": "quarantined=158",
+    "timestamp": "19:26:55"
+  },
+  {
+    "step": "transform_labs",
+    "layer": "silver",
+    "status": "success",
+    "records_in": 12624,
+    "records_out": 6605,
+    "elapsed_sec": 0,
+    "notes": "",
+    "timestamp": "19:26:55"
+  },
+  {
+    "step": "build_dept_kpis",
+    "layer": "gold",
+    "status": "success",
+    "records_in": 9842,
+    "records_out": 72,
+    "elapsed_sec": 0,
+    "notes": "",
+    "timestamp": "19:26:55"
+  },
+  {
+    "step": "build_readmission_analysis",
+    "layer": "gold",
+    "status": "success",
+    "records_in": 9842,
+    "records_out": 120,
+    "elapsed_sec": 0,
+    "notes": "",
+    "timestamp": "19:26:55"
+  },
+  {
+    "step": "build_financial_summary",
+    "layer": "gold",
+    "status": "success",
+    "records_in": 9842,
+    "records_out": 743,
+    "elapsed_sec": 0,
+    "notes": "",
+    "timestamp": "19:26:55"
+  },
+  {
+    "step": "build_critical_labs_watch",
+    "layer": "gold",
+    "status": "success",
+    "records_in": 6605,
+    "records_out": 607,
+    "elapsed_sec": 0,
+    "notes": "",
+    "timestamp": "19:26:55"
+  }
+]

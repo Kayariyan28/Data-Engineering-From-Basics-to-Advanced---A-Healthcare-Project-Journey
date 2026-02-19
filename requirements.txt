@@ -1,0 +1,23 @@
+# Healthcare Data Platform — Local Dependencies
+# Run: pip install -r requirements.txt
+
+# Core pipeline (Bronze → Silver → Gold local runner)
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Web dashboard
+flask>=3.0.0
+
+# Optional: Spark jobs (only needed if running spark_jobs/ scripts)
+# pyspark==3.4.0
+# delta-spark==2.4.0
+
+# Optional: Kafka producer (only needed if running kafka_producers/)
+# kafka-python>=2.0.2
+
+# Optional: Airflow (only needed if running the full orchestrated pipeline)
+# apache-airflow>=2.7.0
+
+# Optional: dbt (only needed if running dbt_project/)
+# dbt-core>=1.6.0
+# dbt-postgres>=1.6.0

@@ -1,0 +1,35 @@
+# ============================================================
+# Healthcare Analytics – Shiny Dashboard Docker image
+#
+# --platform=linux/amd64 forces x86 emulation via Rosetta 2
+# on Apple Silicon (M1/M2/M3) Macs. Docker Desktop handles
+# this transparently — no extra setup needed.
+# ============================================================
+FROM --platform=linux/amd64 rocker/shiny-verse:4.4.0
+
+# ── Install / upgrade packages ───────────────────────────────────────────────
+# rocker/shiny-verse bundles tidyverse + shiny, but the bslib version
+# may be too old to support page_navbar(), value_box(theme=), nav_panel().
+# We explicitly install the latest versions from CRAN to guarantee
+# bslib >= 0.7, shiny >= 1.8, plotly, and DT are all present.
+RUN R -e " \
+  install.packages( \
+    c('shiny', 'bslib', 'plotly', 'DT', 'lubridate'), \
+    repos   = 'https://cloud.r-project.org', \
+    quiet   = FALSE \
+  ) \
+"
+
+# ── Copy app ─────────────────────────────────────────────────────────────────
+# The sub-folder name sets the URL path → http://localhost:3838/healthcare
+# --chown ensures the shiny user (not root) owns the file so shiny-server
+# can read it (shiny-server drops privileges to the 'shiny' user at runtime)
+COPY --chown=shiny:shiny app.R /srv/shiny-server/healthcare/app.R
+
+# ── Runtime config ───────────────────────────────────────────────────────────
+# Data is mounted at runtime via docker-compose:
+#   ./data/output → /data/output  (read-only)
+# The env var tells app.R exactly where to look.
+ENV HEALTHCARE_DATA_PATH=/data/output
+
+EXPOSE 3838

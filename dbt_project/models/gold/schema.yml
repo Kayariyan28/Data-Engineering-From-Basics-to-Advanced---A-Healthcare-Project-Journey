@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: avg_los_by_department
+    description: >
+      Monthly aggregate of patient admission statistics per department.
+      Used by hospital operations for bed management and staffing decisions.
+      Materialized as a table in the 'gold' schema. Rebuilt nightly by Airflow.
+
+    columns:
+      - name: department
+        description: Hospital department (standardized to uppercase)
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['CARDIOLOGY', 'NEUROLOGY', 'ORTHOPEDICS', 'EMERGENCY', 'ICU', 'ONCOLOGY']
+
+      - name: admission_month
+        description: First day of the calendar month for the aggregation window
+        tests:
+          - not_null
+
+      - name: total_admissions
+        description: Count of distinct admissions in the month
+        tests:
+          - not_null
+
+      - name: avg_los_days
+        description: Average length of stay in days (admission → discharge)
+        tests:
+          - not_null
+
+      - name: readmission_rate_pct
+        description: Percentage of admissions flagged as readmissions (0–100)
+        tests:
+          - not_null
+
+      - name: readmission_status
+        description: Alert tier based on readmission rate
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['OK', 'WARNING', 'CRITICAL']
+
+  - name: mart_dept_monthly_kpis
+    description: >
+      Comprehensive monthly KPI mart combining admission stats with financial
+      metrics. Primary source for executive dashboards.
